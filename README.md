@@ -1,30 +1,35 @@
-# Solving-Car-Rental-Problem-using-Policy-Iteration
+# Ex-3: Solving-Car-Rental-Problem-using-Policy-Iteration
 
-## Date :
 
-## Aim
+## Aim:
 To implement the Policy Iteration Algorithm for solving the Car Rental Problem in Reinforcement Learning and determine the optimal policy that maximizes expected rewards.
 
 ---
 
-## Algorithm
+## Algorithm:
 
-1. Initialize the environment parameters such as maximum cars, moving cost, rental reward, and discount factor.
-2. Initialize the state-value function and policy.
-3. Perform Policy Evaluation:
+**Step-1:** Initialize the environment parameters such as maximum cars, moving cost, rental reward, and discount factor.
+
+**Step-2:** Initialize the state-value function and policy.
+
+**Step-3:** Perform Policy Evaluation:
    - Compute the value function for the current policy.
    - Repeat until the value function converges.
-4. Perform Policy Improvement:
+
+**Step-4:** Perform Policy Improvement:
    - Evaluate all possible actions for each state.
    - Select the action with the highest expected return.
-5. Repeat Policy Evaluation and Policy Improvement until the policy becomes stable.
-6. Display the optimal policy and value function.
+
+**Step-5:** Repeat Policy Evaluation and Policy Improvement until the policy becomes stable.
+
+**Step-6:** Display the optimal policy and value function.
 
 
 
-## Program
+## Program:
 
-```
+```python
+
 #Solving car rental problem using Policy Iteration 
 
 import numpy as np
@@ -132,14 +137,40 @@ print(policy)
 
 print("\nOptimal Value Function:\n")
 print(V)
+
+```
+
+## Output:
+
+```python
+
+Optimal Policy:
+
+[[-1  1  1  1  1  0]
+ [-1 -1  1  1  0  0]
+ [-1 -1  1  0  0  0]
+ [-1 -1  0  0  0  0]
+ [-1  0  0  0  0  0]
+ [ 0  0  0  0  0  0]]
+
+Optimal Value Function:
+
+[[360.36734684 402.63054684 438.47854684 467.19854684 487.99854684
+  499.99854684]
+ [402.63054684 412.63054684 448.47869216 477.19869216 499.99854684
+  599.99825621]
+ [438.47854684 448.47854684 467.47882294 499.99854684 599.99825621
+  699.99796558]
+ [467.19854684 477.19854684 499.99854684 599.99825621 699.99796558
+  799.99767494]
+ [487.99854684 499.99854684 599.99825621 699.99796558 799.99767494
+  899.99738431]
+ [499.99854684 599.99825621 699.99796558 799.99767494 899.99738431
+  999.99709368]]
+
 ```
 ---
 
-## Output
-
-<img width="732" height="478" alt="image" src="https://github.com/user-attachments/assets/9a3c4fb0-0447-4d10-8501-44274aa991f4" />
-
-
-## Result
+## Result:
 
 The Policy Iteration Algorithm was successfully implemented for solving the Car Rental Problem. The algorithm iteratively evaluated and improved the policy until the optimal policy and value function were obtained, maximizing the expected reward.
